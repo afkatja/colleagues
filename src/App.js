@@ -1,54 +1,21 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import Logo from './Logo';
-import colors from './styles/colors';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './data/store';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { persistStore } from 'redux-persist';
 
-import ColleaguesList from './colleagues-list';
+import Content from './content';
 
-const AppContainer = styled.main`
-  color: ${colors.text};
-`;
+const history = createBrowserHistory();
+persistStore(store);
 
-const ContentContainer = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-`;
-
-const StyledHeader = styled.header`
-  background: ${colors.black};
-`;
-
-const StyledTitle = styled.h1`
-  font-size: 6.8rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin: 0 0 25px;
-`;
-
-const StyledIntro = styled.p`
-  font-size: 2.2rem;
-  font-style: italic;
-  text-align: left;
-  line-height: 1.7;
-`;
-
-class App extends Component {
-  render() {
-    return (
-      <AppContainer>
-        <StyledHeader>
-          <Logo color={colors.blue} />
-        </StyledHeader>
-        <ContentContainer>
-          <StyledTitle>Acato medewerkers</StyledTitle>
-          <StyledIntro>
-            Een lijst van de medewerkers. Klik een van hen!
-          </StyledIntro>
-          <ColleaguesList {...this.props} />
-        </ContentContainer>
-      </AppContainer>
-    );
-  }
-}
+const App = props => (
+  <Provider store={store}>
+    <Router history={history}>
+      <Content />
+    </Router>
+  </Provider>
+);
 
 export default App;

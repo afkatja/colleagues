@@ -1,29 +1,36 @@
 {
-  "name": "acato-assessment",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-redux": "^5.0.7",
-    "react-scripts": "1.1.4",
-    "redux": "^4.0.0",
-    "redux-api-middleware": "^2.3.0",
-    "redux-thunk": "^2.2.0"
-  },
-  "devDependencies": {
-    "history": "^4.7.2",
-    "prettier": "^1.12.1",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "^4.0.8",
-    "redux-persist": "^5.9.1",
-    "styled-components": "^3.2.6"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+	"name": "acato-assessment",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"isomorphic-fetch": "^2.2.1",
+		"npm": "^6.0.1",
+		"react": "^16.3.2",
+		"react-dom": "^16.3.2",
+		"react-redux": "^5.0.7",
+		"react-redux-lifecycle": "^2.2.0",
+		"react-scripts": "1.1.4",
+		"redux": "^4.0.0",
+		"redux-api-middleware": "^2.3.0",
+		"redux-thunk": "^2.2.0",
+		"styled-components": "^3.2.6"
+	},
+	"devDependencies": {
+		"eslint": "^4.19.1",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-plugin-import": "^2.11.0",
+		"eslint-plugin-jsx-a11y": "^6.0.3",
+		"eslint-plugin-react": "^7.8.2",
+		"history": "^4.7.2",
+		"prettier": "^1.12.1",
+		"react-router-dom": "^4.2.2",
+		"react-router-redux": "^4.0.8",
+		"redux-persist": "^5.9.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	}
 }

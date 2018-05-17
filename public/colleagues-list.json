@@ -1,0 +1,29 @@
+{
+	"colleagues": [
+		{
+			"name": "Lieke",
+			"avatar": "lieke.jpg",
+			"occupation": "UX stagiaire"
+		},
+		{
+			"name": "Valentijn",
+			"avatar": "valentijn.jpg",
+			"occupation": "managing partner"
+		},
+		{
+			"name": "Marien",
+			"avatar": "marien.png",
+			"occupation": "senior developer"
+		},
+		{
+			"name": "Jorik",
+			"avatar": "jorik.png",
+			"occupation": "senior developer"
+		},
+		{
+			"name": "Merel",
+			"avatar": "merel.jpg",
+			"occupation": "front-end developer"
+		}
+	]
+}
