@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { pulse } from 'react-animations';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { transparentize } from 'polished';
 
 import { openPopover } from '../data/actions';
 
@@ -12,11 +13,40 @@ import colors from '../styles/colors';
 const pulseAnimation = keyframes`${pulse}`;
 
 const StyledItem = styled.li`
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	width: 180px;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 200px;
+		transition: opacity 0.3s ease-in-out;
+		background: linear-gradient(
+			145deg,
+			${transparentize(0.2, colors.blue)} 0,
+			rgba(255, 255, 255, 0) 100%
+		);
+	}
 	&:hover {
 		cursor: pointer;
+		z-index: 2;
 		animation: 2s linear forwards infinite ${pulseAnimation};
+		&::after {
+			opacity: 0;
+		}
+		img {
+			filter: none;
+		}
+		h4,
+		p {
+			color: ${colors.blue};
+		}
 	}
 `;
 
@@ -33,6 +63,8 @@ const StyledImg = styled.img`
 	width: 180px;
 	height: 200px;
 	object-position: center;
+	filter: grayscale(1);
+	transition: all 0.3s ease-in-out;
 `;
 
 const ColleagueBlock = (props) => {

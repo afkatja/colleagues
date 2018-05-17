@@ -41,6 +41,10 @@ const StyledBtn = styled.button`
 	position: absolute;
 	right: -20px;
 	top: -20px;
+	&:hover,
+	&:focus {
+		outline: none;
+	}
 `;
 
 export class Popover extends Component {
