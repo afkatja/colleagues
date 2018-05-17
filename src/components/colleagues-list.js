@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { withLifecycleActions } from 'react-redux-lifecycle';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getColleagues } from './data/actions';
+import { getColleagues } from '../data/actions';
 
 import ColleagueBlock from './colleague-block';
 

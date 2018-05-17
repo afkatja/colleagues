@@ -9,6 +9,25 @@ export function getColleagues() {
       method: 'GET',
     })
       .then(response => response.json())
-      .then(data => dispatch({ type: GET_COLLEAGUES, colleagues: data.colleagues }));
+      .then(data =>
+        dispatch({ type: GET_COLLEAGUES, colleagues: data.colleagues }));
+  };
+}
+
+export const POPOVER_OPEN = 'POPOVER_OPEN';
+export function openPopover(content) {
+  return function (dispatch) {
+    dispatch({
+      type: POPOVER_OPEN,
+      popoverOpen: true,
+      popoverContent: content,
+    });
+  };
+}
+
+export const POPOVER_CLOSE = 'POPOVER_CLOSE';
+export function closePopover() {
+  return function (dispatch) {
+    dispatch({ type: POPOVER_CLOSE, popoverOpen: false });
   };
 }

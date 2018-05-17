@@ -28,5 +28,6 @@
 				"paths": ["app"]
 			}
 		}
-	}
+	},
+	"plugins": ["babel"]
 }
