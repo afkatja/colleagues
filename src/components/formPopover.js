@@ -1,10 +1,6 @@
 import React, { Fragment, Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { transparentize } from 'polished';
-
-import { openForm } from '../data/actions';
 
 import colors from '../styles/colors';
 
@@ -75,7 +71,7 @@ const StyledButton = styled.button`
 	}
 `;
 
-export class FormPopover extends Component {
+export default class FormPopover extends Component {
 	state = {
 		formValid: false,
 		name: '',
@@ -102,7 +98,6 @@ export class FormPopover extends Component {
 		}
 	};
 	render() {
-		const { popoverOpen } = this.props;
 		return (
 			<Fragment>
 				<StyledTitle>
@@ -149,17 +144,3 @@ export class FormPopover extends Component {
 		);
 	}
 }
-
-const mapStateToProps = state => ({
-	popoverOpen: state.ui.formOpen,
-	popoverContent: state.ui.popoverContent,
-});
-const mapDispatchToProps = dispatch =>
-	bindActionCreators(
-		{
-			openForm,
-		},
-		dispatch
-	);
-const withState = connect(mapStateToProps, mapDispatchToProps);
-export default withState(FormPopover);
