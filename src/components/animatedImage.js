@@ -1,11 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-import { openPopover } from '../data/actions';
-
-import colors from '../styles/colors';
 
 const imgSize = {
   width: 186,
@@ -80,18 +74,4 @@ const AnimatedImage = props => (
   <StyledImg src={props.src} alt="avatar" role="presentation" />
 );
 
-const mapStateToProps = state => ({
-  popoverOpen: state.ui.popoverOpen,
-});
-
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {
-      openPopover,
-    },
-    dispatch,
-  );
-
-const withState = connect(mapStateToProps, mapDispatchToProps);
-const ConnectedComponent = withState(AnimatedImage);
-export default ConnectedComponent;
+export default AnimatedImage;

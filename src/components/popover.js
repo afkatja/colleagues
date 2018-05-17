@@ -7,6 +7,7 @@ import { PUBLIC_PATH } from '../constants';
 import { openPopover, closePopover } from '../data/actions';
 import { CloseIcon } from './icons';
 import AnimatedImage from './animatedImage';
+import AnimatedBio from './animatedBio';
 
 import colors from '../styles/colors';
 const KEYS = { ESC: 27 };
@@ -61,7 +62,6 @@ export class Popover extends Component {
 
 	render() {
 		const { popoverOpen, closePopover, popoverContent } = this.props;
-		console.log(popoverContent);
 		return (
 			popoverOpen && (
 				<StyledOverlay onClick={closePopover} role="none">
@@ -73,6 +73,7 @@ export class Popover extends Component {
 							<CloseIcon fill={colors.blue} />
 						</StyledBtn>
 					</StyledDialog>
+					<AnimatedBio text={popoverContent.bio} />
 				</StyledOverlay>
 			)
 		);

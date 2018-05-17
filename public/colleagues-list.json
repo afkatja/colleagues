@@ -3,27 +3,37 @@
 		{
 			"name": "Lieke",
 			"avatar": "lieke.jpg",
-			"occupation": "UX stagiaire"
+			"occupation": "UX stagiaire",
+			"bio":
+				"Hi! I'm Lieke. I'm a creative, motivated and enthusiastic student at the TU Delft with a broad interest. I like photography, graphic design, fashion and product design. That's why I'm studying Industrial Design Engineering and have set up a little company in photography, graphic design and art (https://www.facebook.com/Virtuwoos/). Besides that, I'm internationally oriented and interested in developing yourself. Therefore, last year I have taken a year off from studying to work full time on the board of AIESEC Delft. I had the final responsibility over the operations and performance of the outgoing exchange team (mainly marketing and coaching), which facilitates volunteer experiences for the students in Delft. For more information, www.aiesec.nl"
 		},
 		{
 			"name": "Valentijn",
 			"avatar": "valentijn.jpg",
-			"occupation": "managing partner"
+			"occupation": "managing partner",
+			"bio":
+				"I excel at telling stories with passion and finding out true customer needs. Defining the broader mandate and finding innovative solutions together with our partners. Last but not least, I believe that with a positive mindset we can bring out the best in everything!"
 		},
 		{
 			"name": "Marien",
 			"avatar": "marien.png",
-			"occupation": "senior developer"
+			"occupation": "senior developer",
+			"bio":
+				"My name is Marien van Overbeek and I am a front-end developer located in Rotterdam, The Netherlands. I am a strong communicator whose expertise lies at the intersection of concept and user experience. Often times my favorite work comes from a mixture of strategy and “outside the box” thinking that's driven by a collaborative process. Aside from front-end development, I also have a background in search engine optimization, conversion optimization, and content strategy."
 		},
 		{
 			"name": "Jorik",
 			"avatar": "jorik.png",
-			"occupation": "senior developer"
+			"occupation": "senior developer",
+			"bio":
+				"I am a frontend developer (nerd, doing creatieve stuff with code) at Acato, based in The Hague. Here I’ve worked on projects for companies such as TNS Nipo, PostNL, Ximedes, Terberg Leasing and Studytrack. My specialties include high-end coding, maintaining coding standards, interactive experience design and development, brand awareness and brand awareness consultancy."
 		},
 		{
 			"name": "Merel",
 			"avatar": "merel.jpg",
-			"occupation": "front-end developer"
+			"occupation": "front-end developer",
+			"bio":
+				"Is fan van van mijn gezin genieten, sushi maken, fantasy boeken en bloedstollende horror, plus een goede Irish single malt op z’n tijd."
 		}
 	]
 }
