@@ -13,7 +13,7 @@ const blinkCaret = keyframes`
 
 const StyledContainer = styled.div`
 	position: absolute;
-	bottom: 10vh;
+	bottom: -10vh;
 	left: 50%;
 	transform: translateX(-50%);
 	max-width: 900px;
