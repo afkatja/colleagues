@@ -14,6 +14,7 @@ const AppContainer = styled.main`
 const ContentContainer = styled.div`
 	max-width: 900px;
 	margin: 0 auto;
+	padding: 0 40px;
 `;
 
 const StyledHeader = styled.header`
@@ -25,6 +26,7 @@ const StyledTitle = styled.h1`
 	text-transform: uppercase;
 	font-weight: 400;
 	margin: 0 0 25px;
+	hyphens: auto;
 `;
 
 const StyledIntro = styled.p`

@@ -13,6 +13,7 @@ const StyledList = styled.ul`
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 `;
 
 const ColleaguesList = props => (
