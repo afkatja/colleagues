@@ -21,6 +21,7 @@ export function openPopover(content) {
       type: POPOVER_OPEN,
       popoverOpen: true,
       popoverContent: content,
+      popoverType: 'person',
     });
   };
 }
@@ -29,5 +30,16 @@ export const POPOVER_CLOSE = 'POPOVER_CLOSE';
 export function closePopover() {
   return function (dispatch) {
     dispatch({ type: POPOVER_CLOSE, popoverOpen: false });
+  };
+}
+
+export const FORM_OPEN = 'FORM_OPEN';
+export function openForm() {
+  return function (dispatch) {
+    dispatch({
+      type: FORM_OPEN,
+      popoverOpen: true,
+      popoverType: 'form',
+    });
   };
 }

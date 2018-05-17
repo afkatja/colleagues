@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { openPopover, closePopover } from '../data/actions';
 
 import Logo from './Logo';
 import ColleaguesList from './colleagues-list';
-import Popover from './popover';
+import PopoverContainer from './popoverContainer';
 
 import colors from '../styles/colors';
 
@@ -46,8 +49,20 @@ const Content = props => (
       <StyledIntro>Een lijst van de medewerkers. Klik een van hen!</StyledIntro>
       <ColleaguesList {...props} />
     </ContentContainer>
-    <Popover />
+    <PopoverContainer popoverContent={props.popoverContent} />
   </AppContainer>
 );
-
-export default Content;
+const mapStateToProps = state => ({
+  popoverOpen: state.ui.popoverOpen,
+  popoverContent: state.ui.popoverContent,
+});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      closePopover,
+      openPopover,
+    },
+    dispatch,
+  );
+const withState = connect(mapStateToProps, mapDispatchToProps);
+export default withState(Content);

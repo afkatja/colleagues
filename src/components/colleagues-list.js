@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import { getColleagues } from '../data/actions';
 
 import ColleagueBlock from './colleague-block';
+import EmptyPerson from './emptyPerson';
 
 const StyledList = styled.ul`
 	list-style: none;
@@ -21,6 +22,7 @@ const ColleaguesList = props => (
     {props.colleagues.map(colleague => (
       <ColleagueBlock key={colleague.name} person={colleague} />
 		))}
+    <EmptyPerson />
   </StyledList>
 );
 
